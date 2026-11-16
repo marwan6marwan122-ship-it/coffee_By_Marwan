@@ -1,0 +1,77 @@
+
+/* ===== FIX TESTIMONIAL SLIDER ON MOBILE ===== */
+
+.testimonial-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+}
+
+.testimonial-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.testimonial-card {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.testimonial-card img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.testimonial-card[aria-hidden="true"] {
+    visibility: hidden;
+}
+
+@media (max-width: 900px) {
+    .testimonial-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .testimonial-card img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .testimonial-slider {
+        gap: 5px;
+    }
+
+    .slider-btn {
+        flex: 0 0 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .testimonial-wrapper {
+        width: 100%;
+    }
+
+    .testimonial-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .testimonial-card p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+}
